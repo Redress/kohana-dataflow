@@ -136,7 +136,7 @@ class Kohana_Dataflow_Encode_XML extends Dataflow_Encode
 			{
 				$this->_writer->startElement($index);
 				
-				$index = Inflector::singular($index);
+				$index = Inflector::singular($index, NULL, TRUE);
 			}
 			
 			foreach ($element as $key => $name)
