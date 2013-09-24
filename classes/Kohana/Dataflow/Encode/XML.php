@@ -57,7 +57,7 @@ class Kohana_Dataflow_Encode_XML extends Dataflow_Encode
 		$this->_writer->setIndent(TRUE);
 		$this->_writer->setIndentString(' ');
 		$this->_writer->startDocument('1.0', 'UTF-8');
-		
+		/*
 		$keys = array_keys($data);
 
 		if ( ! empty($data) AND $key = array_shift($keys))
@@ -68,7 +68,7 @@ class Kohana_Dataflow_Encode_XML extends Dataflow_Encode
 
 			$data =& $data[$key];
 		}
-		
+		*/
 		$this->_process($data);
 
 		$this->_writer->endElement();
