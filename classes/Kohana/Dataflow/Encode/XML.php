@@ -172,7 +172,7 @@ class Kohana_Dataflow_Encode_XML extends Dataflow_Encode
 	 * @param	mixed
 	 * @return	boolean
 	 */
-	protected function _content($element)
+	protected function _content(& $element)
 	{
 		if (is_array($element))
 		{
