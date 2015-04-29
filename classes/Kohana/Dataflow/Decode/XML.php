@@ -72,7 +72,15 @@ class Kohana_Dataflow_Decode_XML extends Dataflow_Decode
 		} 
 		else if (isset($this->_decoded[$index]))
 		{
-			if(isset($this->_decoded[$index][0]))
+			if(!is_array($this->_decoded[$index]))
+			{
+				$this->_decoded[$index] = array(
+					0 => $this->_decoded[$index],
+				);
+
+				$key = 1;
+			}
+			else if(isset($this->_decoded[$index][0]))
 			{
 				$key = count($this->_decoded[$index]);
 			}
