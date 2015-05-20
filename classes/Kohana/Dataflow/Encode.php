@@ -172,7 +172,7 @@ abstract class Kohana_Dataflow_Encode
 		// Suppress passing of headers when no request - example during CLI for unit testing
 		if ($request)
 		{
-			$request->response()->headers('content-type', $this->get_content_type());
+			$request->headers('content-type', $this->content_type());
 		}
 		
 		return $this;
